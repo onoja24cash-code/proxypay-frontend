@@ -26,3 +26,40 @@ button.copyButton_node_modules-\@docusaurus-theme-classic-src-theme-CodeBlock-st
 pre code {
   position: relative;
 }
+
+/* Rate limit & examples widget */
+.pp-rate-widget {
+  position: fixed;
+  right: 16px;
+  top: 80px;
+  width: 320px;
+  max-height: 75vh;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+  padding: 12px;
+  border-radius: 8px;
+  z-index: 9999;
+  font-size: 13px;
+}
+.pp-rate-widget h4 { margin: 0 0 8px 0; }
+.pp-rate-widget label { display:block; margin-top:8px; font-weight:600; }
+.pp-rate-widget select, .pp-rate-widget input { width:100%; padding:6px 8px; margin-top:6px; box-sizing:border-box; }
+.pp-rate-details ul { margin:6px 0 0 16px; padding:0; }
+.pp-muted { color: #666; font-size: 13px; }
+.pp-alert { margin-top:8px; background:#fff4e5; border-left:4px solid #ffb020; padding:6px 8px; border-radius:4px; }
+.pp-calc { margin-top:10px; }
+.pp-calc-results { margin-top:8px; }
+.pp-ok { color: #2e8555; font-weight:600; }
+.pp-notok { color: #b91c1c; font-weight:700; }
+.pp-lang-tabs { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+.pp-lang-tabs button { padding:6px 8px; border-radius:6px; border:1px solid #e6e6e6; background:#fafafa; cursor:pointer; font-size:12px; }
+.pp-lang-tabs button.active { background:var(--ifm-color-primary); color:#fff; border-color:transparent; }
+.pp-code-block { position:relative; margin-top:8px; }
+.pp-code-block pre { background:#0b1220; color:#e6eef8; padding:10px; border-radius:6px; overflow:auto; font-size:12px; }
+.pp-copy { position:absolute; right:8px; top:8px; padding:6px 8px; border-radius:6px; background:var(--ifm-color-primary); color:#fff; border:none; cursor:pointer; }
+
+@media (max-width: 900px) {
+  .pp-rate-widget { display:none; }
+}
